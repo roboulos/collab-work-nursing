@@ -386,6 +386,23 @@ export default function Page() {
               {jobs.slice(0, 5).map((job) => (
                 <JobCard key={job.id} job={job} />
               ))}
+              
+              {/* See More Jobs Button */}
+              {MORE_JOBS_URL && MORE_JOBS_URL !== "#" && (
+                <div className="mt-8 text-center">
+                  <a
+                    href={MORE_JOBS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md"
+                  >
+                    See More Nursing Jobs
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>
